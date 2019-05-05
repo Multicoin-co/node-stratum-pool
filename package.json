@@ -32,6 +32,7 @@
         "base58-native": "^0.1.4",
         "bchaddrjs": "^0.3.0",
         "bignum": "^0.13.0",
+        "cryptocurrency-addr": "git://github.com/Invader444/node-cryptocurrency-addr.git",
         "multi-hashing": "git://github.com/Invader444/node-multi-hashing.git"
     },
     "engines": {

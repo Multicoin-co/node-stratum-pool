@@ -28,10 +28,10 @@
         "url": "https://github.com/zone117x/node-stratum-pool.git"
     },
     "dependencies": {
-        "async": "^2.6.1",
+        "async": "^3.1.0",
         "base58-native": "^0.1.4",
-        "bchaddrjs": "^0.3.0",
-        "bignum": "^0.13.0",
+        "bchaddrjs": "^0.4.2",
+        "bignum": "git://github.com/Invader444/node-bignum.git#node12",
         "cryptocurrency-addr": "git://github.com/Invader444/node-cryptocurrency-addr.git",
         "multi-hashing": "git://github.com/Invader444/node-multi-hashing.git"
     },

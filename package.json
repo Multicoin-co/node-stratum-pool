@@ -34,7 +34,7 @@
         "bignum": "git://github.com/Invader444/node-bignum.git#node12",
         "bitgo-utxo-lib": "git://github.com/miketout/bitgo-utxo-lib.git",
         "cryptocurrency-addr": "git://github.com/Invader444/node-cryptocurrency-addr.git",
-        "equihashverify": "git://github.com/s-nomp/equihashverify.git",
+        "equihashverify": "git://github.com/AoD-Technologies/equihashverify.git",
         "merkle-bitcoin": "^1.0.2",
         "multi-hashing": "git://github.com/Invader444/node-multi-hashing.git",
         "verushash": "git://github.com/VerusCoin/verushash-node.git"

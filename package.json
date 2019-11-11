@@ -37,6 +37,7 @@
         "equihashverify": "git://github.com/AoD-Technologies/equihashverify.git",
         "merkle-bitcoin": "^1.0.2",
         "multi-hashing": "git://github.com/Invader444/node-multi-hashing.git",
+        "promise": "^8.0.3",
         "verushash": "git://github.com/AoD-Technologies/verushash-node.git"
     },
     "engines": {

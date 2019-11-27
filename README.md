@@ -4,20 +4,17 @@ pools, each with their own daemon and stratum port :)
 #### Notice
 This is a module for Node.js that will do nothing on its own. Unless you're a Node.js developer who would like to
 handle stratum authentication and raw share data then this module will not be of use to you. For a full featured portal
-that uses this module, see [NOMP (Node Open Mining Portal)](https://github.com/zone117x/node-open-mining-portal). It
+that uses this module, see [Cryptocurrency Pool Server](//github.com/AoD-Technologies/cryptocurrency-pool-server). It
 handles payments, website front-end, database layer, mutli-coin/pool support, auto-switching miners between coins/pools,
-etc.. The portal also has an [MPOS](https://github.com/MPOS/php-mpos) compatibility mode so that the it can function as
-a drop-in-replacement for [python-stratum-mining](https://github.com/Crypto-Expert/stratum-mining).
+etc.. The portal also has an [MPOS](//github.com/MPOS/php-mpos) compatibility mode so that the it can function as
+a drop-in-replacement for [python-stratum-mining](//github.com/Crypto-Expert/stratum-mining).
 
-
-[![Build Status](https://travis-ci.org/zone117x/node-stratum-pool.png?branch=master)](https://travis-ci.org/zone117x/node-stratum-pool)
-
-[![NPM](https://nodei.co/npm/stratum-pool.png?downloads=true&stars=true)](https://nodei.co/npm/stratum-pool/)
+[![NPM](https://nodei.co/npm/cryptocurrency-stratum-pool.png?downloads=true&stars=true)](https://nodei.co/npm/cryptocurrency-stratum-pool/)
 
 #### Why
 This server was built to be more efficient and easier to setup, maintain and scale than existing stratum poolservers
 which are written in python. Compared to the spaghetti state of the latest
-[stratum-mining python server](https://github.com/Crypto-Expert/stratum-mining/), this software should also have a
+[stratum-mining python server](//github.com/Crypto-Expert/stratum-mining/), this software should also have a
 lower barrier to entry for other developers to fork and add features or fix bugs.
 
 
@@ -32,7 +29,7 @@ Features
 * Process share submissions
 * Session managing for purging DDoS/flood initiated zombie workers
 * Auto ban IPs that are flooding with invalid shares
-* __POW__ (proof-of-work) & __POS__ (proof-of-stake) support
+* __PoW__ (proof-of-work) & __PoS__ (proof-of-stake) support
 * Transaction messages support
 * Vardiff (variable difficulty / share limiter)
 * When started with a coin deamon that hasn't finished syncing to the network it shows the blockchain download progress and initializes once synced
@@ -49,25 +46,16 @@ Features
 * ✓ __Keccak__ (Maxcoin [MAX], HelixCoin, CryptoMeth, Galleon, 365coin, Slothcoin, BitcointalkCoin)
 * ✓ __Skein__ (Skeincoin [SKC])
 * ✓ __Groestl__ (Groestlcoin [GRS])
-
-May be working (needs additional testing):
-* ? *Blake* (Blakecoin [BLC])
-* ? *Fugue* (Fuguecoin [FC])
-* ? *Qubit* (Qubitcoin [Q2C], Myriadcoin [MYR])
-* ? *SHAvite-3* (INKcoin [INK])
-* ? *Sha1* (Sha1coin [SHA], Yaycoin [YAY])
-
-Not working currently:
-* *Groestl* - for Myriadcoin
-* *Keccak* - for eCoin & Copperlark
-* *Hefty1* (Heavycoin [HVC])
-
+* ✓ __Blake__ (Blakecoin [BLC])
+* ✓ __Fugue__ (Fuguecoin [FC])
+* ✓ __Qubit__ (Qubitcoin [Q2C], Myriadcoin [MYR])
+* ✓ __SHAvite-3__ (INKcoin [INK])
+* ✓ __Sha1__ (Sha1coin [SHA], Yaycoin [YAY])
 
 Requirements
 ------------
-* node v0.10+
+* node v12.10.3+
 * coin daemon (preferably one with a relatively updated API and not some crapcoin :p)
-
 
 Example Usage
 -------------
@@ -75,7 +63,7 @@ Example Usage
 #### Install as a node module by cloning repository
 
 ```bash
-git clone https://github.com/zone117x/node-stratum-pool node_modules/stratum-pool
+git clone https://github.com/AoD-Technologies/cryptocurrency-stratum-pool node_modules/cryptocurrency-stratum-pool
 npm update
 ```
 
@@ -157,7 +145,7 @@ var myCoin = {
 Create and start new pool with configuration options and authentication function
 
 ```javascript
-var Stratum = require('stratum-pool');
+var Stratum = require('cryptocurrency-stratum-pool');
 
 var pool = Stratum.createPool({
 
@@ -351,31 +339,35 @@ pool.start();
 
 Credits
 -------
-* [vekexasia](//github.com/vekexasia) - co-developer & great tester
-* [LucasJones](//github.com/LucasJones) - got p2p block notify working and implemented additional hashing algos
-* [TheSeven](//github.com/TheSeven) - answering an absurd amount of my questions, found the block 1-16 problem, provided example code for peer node functionality
-* [pronooob](https://dogehouse.org) - knowledgeable & helpful
-* [Slush0](//github.com/slush0/stratum-mining) - stratum protocol, documentation and original python code
-* [viperaus](//github.com/viperaus/stratum-mining) - scrypt adaptions to python code
-* [ahmedbodi](//github.com/ahmedbodi/stratum-mining) - more algo adaptions to python code
-* [steveshit](//github.com/steveshit) - ported X11 hashing algo from python to node module
-
+* [Invader444](//github.com/Invader444) - lead developer
+* [The NOMP developers](//github.com/zone117x/node-stratum-pool#credits)
 
 Donations
 ---------
 To support development of this project feel free to donate :)
 
-* BTC: `1KRotMnQpxu3sePQnsVLRy3EraRFYfJQFR`
-* LTC: `LKfavSDJmwiFdcgaP1bbu46hhyiWw5oFhE`
-* VTC: `VgW4uFTZcimMSvcnE4cwS3bjJ6P8bcTykN`
-* MAX: `mWexUXRCX5PWBmfh34p11wzS5WX2VWvTRT`
-* QRK: `QehPDAhzVQWPwDPQvmn7iT3PoFUGT7o8bC`
-* DRK: `XcQmhp8ANR7okWAuArcNFZ2bHSB81jpapQ`
-* DOGE: `DBGGVtwAAit1NPZpRm5Nz9VUFErcvVvHYW`
-* Cryptsy Trade Key: `254ca13444be14937b36c44ba29160bd8f02ff76`
+* AUR: `AStZjnHVZeeMu6qSefmfFf2hcTrw1D4PTV`
+* BTC: `1HTNmSPrPzWDXiQKHqGGmwxvWpo92861We`
+* BCH: `qz37lsgu585sthyvj03wdnylzj697utezs09sqr8s6`
+* BOOT: `RKrEC2DN85DEAVGnPKFMT2kwBop7W8SgtH`
+* BSV: `16pw6eWNQ543djFGPFhWTupKn6DAFybsYj`
+* BTCV: `3Cc2odLwAPMb8in6DtzYcaz7VteMHCdCWS`
+* DASH: `XptCKDUpStArP6WriH1EqUFkG7X4EB5QVb`
+* DGB: `DNvszcyDbQbSJ6aFGXCc4adSXoXjtFSXYs`
+* DOGE: `DEiAhRD6ACGeEHPAhKT4W4WiUN6Q85BK83`
+* LTC: `LQg8JcRgHUST9D2pD6fXXSCRsF9jD3GdWK`
+* LCC: `CJRx4ps1B8f3fByneiAg7oycEMtTtbFkG2`
+* LCNT: `Lfe93Y8mC1ueKpHtWw2Kp6APoLQs3GpGpF`
+* RVN: `RMTcqUJnzSTMZW825eP77yDxhcCuW3xVyy`
+* SHND: `SZjpJRp5rmD83NmaStVJpn4NkfmwM52Jnw`
+* VTC: `3KxFSn2hw7G61QyheKLYR5sffR6ErKJNys`
+* VRSC: `RRb1GeiDcbAGMJQrckCcFSnKj9rZDUVJ4y`
+* XVG: `D5Xzq6edmskQBVHUZuzvCbuAg1f8gPU2bo`
+* ZEN: `znhHi2eiRAQhzekktTqdjDBCeb3L2QkuHjf`
+* ZER: `t1R3enmEZj8rVsUG19sznLSkCRFFj4vEcVM`
 
 License
 -------
-Released under the GNU General Public License v2
+Released under the GNU General Public License v3
 
-http://www.gnu.org/licenses/gpl-2.0.html
+https://www.gnu.org/licenses/gpl-3.0.html

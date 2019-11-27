@@ -1,31 +1,39 @@
 {
-    "name": "stratum-pool",
-    "version": "0.1.9",
+    "name": "cryptocurrency-stratum-pool",
+    "version": "0.9.0",
     "description": "High performance Stratum poolserver in Node.js",
     "keywords": [
         "stratum",
         "mining",
+        "staking",
         "pool",
         "server",
         "poolserver",
         "bitcoin",
         "litecoin",
-        "scrypt"
+        "zcash",
+        "veruscoin",
+        "sha256",
+        "scrypt",
+        "equihash",
+        "verushash",
+        "x16rv2"
     ],
-    "homepage": "https://github.com/zone117x/node-stratum-pool",
+    "homepage": "https://github.com/AoD-Technologies/cryptocurrency-stratum-pool",
     "bugs": {
-        "url": "https://github.com/zone117x/node-stratum-pool/issues"
+        "url": "https://github.com/AoD-Technologies/cryptocurrency-stratum-pool/issues"
     },
-    "license": "GPL-2.0",
-    "author": "Matthew Little",
+    "license": "GPL-3.0",
+    "author": "Jonathan Horowitz",
     "contributors": [
+        "Matthew Little",
         "vekexasia",
         "TheSeven"
     ],
     "main": "lib/index.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/zone117x/node-stratum-pool.git"
+        "url": "https://github.com/AoD-Technologies/cryptocurrency-stratum-pool.git"
     },
     "dependencies": {
         "async": "^3.1.0",
@@ -41,6 +49,6 @@
         "verushash": "git://github.com/AoD-Technologies/verushash-node.git"
     },
     "engines": {
-        "node": ">=0.10"
+        "node": ">=12.10.3"
     }
 }
